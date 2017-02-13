@@ -4,4 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
          :confirmable
+         has_many :messages
+         has_many :chats, through: :messages
 end
