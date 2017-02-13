@@ -5,7 +5,17 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# 회원인증 및 권한설정을 위한 젬
+gem 'devise'     # 회원가입 및 인증
+gem 'rolify'     # role 관리
+gem 'authority'  # 권한설정
 
+# 페이지 뷰를 깔끔하게 보이도록 하기 위해서 아래의 두 젬을 추가로 설치한다.
+gem 'bootstrap-sass'
+gem 'simple_form'
+
+# 개발 모드에서 이메일을 보내않고 브라우저에서 미리보기한는 젬
+gem 'letter_opener', group: :development
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
